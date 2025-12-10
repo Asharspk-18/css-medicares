@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicare Central</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      header {
+        background-color: #2f3e46;
+        padding: 16px 0px;
+        position: sticky;
+        top: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .nav-menu-btn {
+        float: left;
+      }
+
+      .nav-menu-btn > button {
+        background-color: #2f3e46;
+        border: 1px solid #fff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+        padding: 15px;
+        width: auto;
+        height: auto;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+       
+      }
+
+      .nav-menu-btn > button:hover {
+        background-color: #fff;
+        color:  #00a896;
+       
+      }
+
+      .nav-heading {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        margin-left: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-heading > h1 > span::after {
+        content: "Central";
+        color: #00a896;
+        font-size: 35px;
+        font-weight: 900;
+      }
+
+      .nav-heading > h1 > span::before {
+        content: "\f0fe";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        color: #00a896;
+        margin-right: 8px;
+        transform: rotate(5deg);
+        display: inline-block;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .nav-heading > h1 > span {
+        font-size: 35px;
+        font-weight: 900;
+      }
+
+      .nav-heading > h1 > span {
+        font-size: 35px;
+        font-weight: 900;
+      }
+
+      .nav-heading > h1 > span:hover::before {
+        /* transform: scale(125%, 130%); baher nikal k ayega is sey */
+        transform: scale(-100%, 100%); /* is sey palteyga */
+        cursor: pointer;
+        
+      }
+
+      .nav-book-btn > a {
+        color: #fff;
+        font-size: 15px;
+        padding: 15px 35px;
+        width: auto;
+        height: auto;
+        font-weight: 800;
+        align-items: center;
+        justify-content: center;
+        background-color: #02c39a;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        margin-right: 20px;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+      }
+
+      .nav-book-btn:hover {
+        transform: translateY(-3px);
+      }
+
+      .nav-book-btn > a:hover {
+        background-color: #00a896;
+      }
+
+      .nav-book-btn {
+        float: right;
+        margin-top: 15px;
+      }
+
+      /* Section 01 */
+
+      .sec-one {
+        background-color: #243238;
+        color: #ffffff;
+        padding: 100px 20%;
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sec-one-main-div {
+        max-width: 500px;
+        margin-left: 45%; /* Adjust this value to move the div left or right */
+      }
+
+      .sec-one-first-hed {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .sec-one-second-hed {
+        font-size: 48px;
+        font-weight: 700;
+        color: #00c896;
+        margin-bottom: 20px;
+      }
+
+      .sec-one p {
+        color: #d5d5d5; /* light gray text */
+        line-height: 1.7;
+        margin-bottom: 30px;
+        font-size: 16px;
+      }
+
+      .sec-one-book-btn,
+      .sec-one-contact-btn {
+        padding: 14px 30px;
+        border-radius: 50px;
+        border: 2px solid #00c896;
+        font-weight: 600;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: 0.3s;
+        margin-right: 15px;
+      }
+
+      .sec-one-book-btn {
+        background: #00c896;
+        color: #ffffff;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .sec-one-book-btn:hover {
+        background: transparent;
+        color: #00c896;
+        transform: translateY(-10%);
+      }
+
+      .sec-one-contact-btn {
+        background: transparent;
+        color: #ffffff;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .sec-one-contact-btn:hover {
+        background: #00c896;
+        color: #ffffff;
+        transform: translateY(-10%);
+      }
+
+      /* Section 02 */
+
+      .sec-two-main-div {
+        background-color: #2f3e46;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+        width: 600px;
+        height: auto;
+        padding: 20px;
+        margin: -20px 0 0 250px;
+        width: 80%;
+        border-radius: 10px;
+      }
+
+      .sec-two-main-div > img {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sec-two-img-div > img {
+        position: absolute;
+        top: 200px;
+        left: 260px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .sec-two-img-div > img:hover {
+        transform: scale(1.1);
+      }
+
+      .sec-two-content > h2 {
+        color: #fff;
+        font-size: 35px;
+        text-align: center;
+        display: block;
+        margin-left: 20%;
+        color: #00c890;
+        width: 500px;
+      }
+
+      .sec-two-content > p {
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        display: block;
+        margin-left: 20%;
+        width: 600px;
+        opacity: 0.5;
+        margin-bottom: 22px;
+      }
+
+      .sec-two-btn {
+        display: block;
+        padding: 14px 30px;
+        border-radius: 50px;
+        border: none;
+        font-weight: 600;
+        cursor: pointer;
+        text-transform: capitalize;
+        background: #00c896;
+        color: #ffffff;
+        margin-left: 150px;
+        position: absolute;
+        top: 732px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .sec-two-btn:hover {
+        background-color: #00a896;
+        transform: translateY(-10%);
+      }
+
+      /* Section 03 */
+
+      .sec-three {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+      }
+
+      .sec-three-hed {
+        font-size: 25px;
+        color: #2f3e46;
+      }
+
+      .sec-three-hed > h1:hover,
+      .sec-three-hed > h1:hover::after {
+        cursor: pointer;
+      }
+
+      .sec-three-hed > h1::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: #02c39a;
+        margin: 10px auto;
+        border-radius: 2px;
+        transition: all 0.3s ease-in;
+      }
+
+      .sec-three-hed > h1:hover::after {
+        width: 50%;
+      }
+
+      .sec-three-card-one > h2::before {
+        content: "\f5dc";
+        font-family: "Font Awesome 6 Free";
+        display: block;
+        color: #00a896;
+        font-size: 40px;
+        transition: all 0.3s ease;
+        padding: 10px;
+      }
+
+      .sec-three-card-two > h2::before {
+        content: "\f5d7";
+        font-family: "Font Awesome 6 Free";
+        display: block;
+        color: #00a896;
+        font-size: 40px;
+        padding: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .sec-three-card-three > h2::before {
+        content: "\f004";
+        font-family: "Font Awesome 6 Free";
+        display: block;
+        color: #00a896;
+        font-size: 40px;
+        transition: all 0.3s ease;
+        padding: 10px;
+      }
+
+      .sec-three-card-four > h2::before {
+        content: "\f77c";
+        font-family: "Font Awesome 6 Free";
+        display: block;
+        color: #00a896;
+        font-size: 40px;
+        transition: all 0.3s ease;
+        padding: 10px;
+      }
+
+      .sec-three-card-div {
+        display: inline-flex;
+        gap: 40px;
+        padding: 0 90px 90px 90px;
+        padding-top: 100px;
+        height: 50%;
+        width: 100%;
+      }
+
+      .sec-three-card-one,
+      .sec-three-card-two,
+      .sec-three-card-three,
+      .sec-three-card-four {
+        padding: 8px;
+        line-height: 1.2;
+        border: 1px solid #d5d5d5;
+        border-radius: 9px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .sec-three-card-one > h2,
+      .sec-three-card-two > h2,
+      .sec-three-card-three > h2,
+      .sec-three-card-four > h2 {
+        padding: 10px;
+        color: #2f3e46;
+      }
+
+      .sec-three-card-one > p,
+      .sec-three-card-two > p,
+      .sec-three-card-three > p,
+      .sec-three-card-four > p {
+        padding: 10px;
+        opacity: 0.5;
+      }
+
+      .sec-three-card-one:hover,
+      .sec-three-card-two:hover,
+      .sec-three-card-three:hover,
+      .sec-three-card-four:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 1px 10px #00a896;
+        cursor: pointer;
+      }
+
+      .sec-three-card-one:hover > h2::before,
+      .sec-three-card-two:hover > h2::before,
+      .sec-three-card-three:hover > h2::before,
+      .sec-three-card-four:hover > h2::before {
+        color: #02c39a;
+        transform: rotate(10deg);
+        font-size: 45px;
+      }
+
+      /* Section 04 */
+
+      .sec-four-hed {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        font-size: 20px;
+        color: #00a896;
+        padding-bottom: 70px;
+      }
+
+      .sec-four-card-div {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        padding: 0 0 120px 120px;
+        gap: 30px;
+      }
+
+      .sec-four-card-one:hover,
+      .sec-four-card-two:hover,
+      .sec-four-card-three:hover {
+        box-shadow: 0 10px 25px #2f3e46;
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      [class^="sec-four-card-"] img {
+        width: 320px;
+        text-align: center;
+        height: 350px;
+        object-position: top;
+        object-fit: cover;
+        display: block;
+      }
+
+      .sec-four-hed-one {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        color: #2f3e46;
+        padding-top: 10px;
+      }
+
+      .sec-four-hed-two {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+        color: #00a896;
+        font-style: italic;
+        font-weight: 200;
+        padding-top: 8px;
+        padding-bottom: 10px;
+      }
+
+      [class^="sec-four-card-"] {
+        transition: all 0.3s ease-in;
+        border-radius: 15px;
+      }
+
+      .sec-four-btn,
+      .sec-four-btn > button {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        color: #fff;
+        padding-top: 10px;
+      }
+
+      /* .sec-four{
+        position: relative;
+        } */
+
+      .sec-four-btn {
+        /* top: 580px;
+        left: 38%;
+        position: absolute; */
+        position: relative;
+        top: -80px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .sec-four-btn > button {
+        background-color: #00c896;
+        border: none;
+        border-radius: 50px;
+        padding: 15px 30px;
+        font-size: 17px;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 150px;
+        width: auto;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+      }
+
+      .sec-four-btn > button:hover {
+        background-color: #008274;
+        transform: translateY(-5px);
+      }
+
+
+
+
+      /* Section 05 */
+
+
+
+      .sec-five {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: -50px;
+        background-color: #f8f9fa;
+        padding: 50px 0;
+      }
+
+      .sec-five-main-hed {
+        font-size: 25px;
+        color: #2f3e46;
+      }
+
+      .sec-five-main-hed > h1 {
+        cursor: pointer;
+      }
+
+      .sec-five-main-hed > h1::after {
+        content: "";
+        display: block;
+        width: 80px;
+        height: 4px;
+        background-color: #02c39a;
+        margin: 10px auto;
+        border-radius: 2px;
+        transition: all 0.3s ease-in;
+      }
+
+      .sec-five-main-hed > h1:hover::after {
+        width: 50%;
+        cursor: pointer;
+      }
+
+      .sec-five-card-main-one,
+      .sec-five-card-main-two {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        padding: 40px 80px;
+      }
+
+      .sec-five-card-one,
+      .sec-five-card-two,
+      .sec-five-card-three {
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #d5d5d5;
+        border-radius: 10px;
+        background: #fff;
+        transition: all 0.3s ease-in-out;
+        line-height: 1.3;
+      }
+
+      .sec-five-card-one:hover,
+      .sec-five-card-two:hover,
+      .sec-five-card-three:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 168, 150, 0.3);
+        cursor: pointer;
+      }
+
+      .sec-five-card-one > h2,
+      .sec-five-card-two > h2,
+      .sec-five-card-three > h2 {
+        color: #2f3e46;
+        font-size: 20px;
+      }
+
+      .sec-five-card-one > p,
+      .sec-five-card-two > p,
+      .sec-five-card-three > p {
+        opacity: 0.5;
+        font-size: 15px;
+      }
+
+      .sec-five-card-main-one > .sec-five-card-one > h2::before {
+        content: "\f0f9";
+      }
+
+      .sec-five-card-main-one > .sec-five-card-two > h2::before {
+        content: "\f497"; 
+      }
+
+      .sec-five-card-main-one > .sec-five-card-three > h2::before {
+        content: "\f7f2"; 
+      }
+
+      .sec-five-card-main-two > .sec-five-card-one > h2::before {
+        content: "\f487"; 
+      }
+
+      .sec-five-card-main-two > .sec-five-card-two > h2::before {
+        content: "\f0f0"; 
+      }
+
+      .sec-five-card-main-two > .sec-five-card-three > h2::before {
+        content: "\f48e"; 
+      }
+
+      .sec-five-card-main-one h2::before,
+      .sec-five-card-main-two h2::before {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        display: block;
+        color: #00a896;
+        font-size: 40px;
+        transition: all 0.3s ease;
+        margin-bottom: 10px;
+      }
+
+      .sec-five-card-one:hover > h2::before,
+      .sec-five-card-two:hover > h2::before,
+      .sec-five-card-three:hover > h2::before {
+        color: #02c39a;
+        transform: rotate(10deg);
+        font-size: 45px;
+      }
+
+
+
+
+
+
+    
+         /* SECTION 06 */
+      
+      .sec-six {
+        background-color: #00a896;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 60px;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .sec-six-item {
+        flex: 1 1 200px;
+      }
+
+      .sec-six-item i {
+        font-size: 45px;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .sec-six-item h2 {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      .sec-six-item p {
+        font-size: 15px;
+        margin-top: 5px;
+        opacity: 0.7;
+      }
+
+     
+         /* FOOTER */
+  
+      footer {
+        background-color: #2f3e46;
+        color: #ffffff;
+        padding: 60px 80px 20px;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px;
+        margin-bottom: 30px;
+      }
+
+      .footer-col {
+        flex: 1 1 220px;
+      }
+
+      .footer-col h3 {
+        color: #00a896;
+        margin-bottom: 15px;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .footer-col p,
+      .footer-col a {
+        color: #ffffff;
+        font-size: 15px;
+        text-decoration: none;
+        opacity: 0.7;
+        display: block;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .footer-col a:hover {
+        color: #00a896;
+        opacity: 1;
+      }
+
+      .footer-col i {
+        margin-right: 8px;
+        color: #00a896;
+      }
+
+      footer hr {
+        border: none;
+        border-top: 1px solid #4f5b62;
+        margin: 20px 0;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        font-size: 14px;
+        opacity: 0.5;
+      }
+
+      .footer-col a:hover, .footer-col p:hover {
+        transform: translateX(5px);
+      }
+
+      .footer-col h3:hover {
+        transform: scale(1.2);
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="nav-menu-btn">
+          <button>
+            <i
+              class="fa-solid fa-bars"
+              style="color:#00a896; font-size: 15px; padding-right: 7px"
+            ></i>
+            <span>MENU</span>
+          </button>
+        </div>
+        <div class="nav-heading">
+          <h1>
+            <span>MediCare</span>
+          </h1>
+        </div>
+        <div class="nav-book-btn">
+          <a href="./login/login.html">Book Appointment</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- x ----------------------- x ----------------------- x ----------------------- x -------------------------x -->
+
+    <!-- Section 01 -->
+
+    <section class="sec-one">
+      <div class="sec-one-main-div">
+        <div class="sec-one-div">
+          <h1 class="sec-one-first-hed">Best Caring,</h1>
+          <h1 class="sec-one-second-hed">Better Healthcare</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Praesentium provident distinctio facere consequuntur id asperiores
+            quae quis quidem qui perspiciatis maxime iste, doloremque eligendi
+            fugiat labore unde repellendus! Eaque, voluptatibus!
+          </p>
+          <button class="sec-one-book-btn">Book an appointment</button>
+          <button class="sec-one-contact-btn">contact us</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- x ----------------------- x ----------------------- x ----------------------- x -------------------------x -->
+
+    <!-- Section 02 -->
+
+    <section class="sec-two">
+      <div class="sec-two-main-div">
+        <div class="sec-two-img-div">
+          <img src="./assets/images/Section-One.png" alt="" />
+        </div>
+        <div class="sec-two-content">
+          <h2>"Your Health is Our Lifeline."</h2>
+          <br />
+          <p>
+            Meet our expert doctors dedicated to personalized and effective
+            treatment.
+          </p>
+          <button class="sec-two-btn">talk to a specialist</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- x ----------------------- x ----------------------- x ----------------------- x -------------------------x -->
+
+    <!-- Section 03 -->
+
+    <section class="sec-three">
+      <div class="sec-three-hed">
+        <h1>Our Special Doctor Specialties</h1>
+      </div>
+
+      <div class="sec-three-card-div">
+        <div class="sec-three-card-one">
+          <h2>Neurology</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            sapiente.
+          </p>
+        </div>
+
+        <div class="sec-three-card-two">
+          <h2>Orthopedics</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            sapiente.
+          </p>
+        </div>
+
+        <div class="sec-three-card-three">
+          <h2>Cardiology</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            sapiente.
+          </p>
+        </div>
+
+        <div class="sec-three-card-four">
+          <h2>Pediatrics</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            sapiente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- x ----------------------- x ----------------------- x ----------------------- x -------------------------x -->
+
+    <!-- Section 04 -->
+
+    <section class="sec-four">
+      <div class="sec-four-hed">
+        <h2>Meet Our Top Rated Doctors</h2>
+      </div>
+
+      <div class="sec-four-card-div">
+        <div class="sec-four-card-one">
+          <img src="./assets/images/Section-One.png" alt="image not found" />
+          <h3 class="sec-four-hed-one">Dr. Alan Walker</h3>
+          <h3 class="sec-four-hed-two">Chief Cardiologist</h3>
+        </div>
+
+        <div class="sec-four-card-two">
+          <img src="./assets/images/doctor-2.jpg" alt="image not found" />
+          <h3 class="sec-four-hed-one">Dr. Tom Chen</h3>
+          <h3 class="sec-four-hed-two">Pediatric Specialist</h3>
+        </div>
+
+        <div class="sec-four-card-three">
+          <img src="./assets/images/doctor-3.png" alt="image not found" />
+          <h3 class="sec-four-hed-one">Dr. Ben Carter</h3>
+          <h3 class="sec-four-hed-two">Head Surgeon</h3>
+        </div>
+      </div>
+
+      <div class="sec-four-btn">
+        <button>book an appointment today</button>
+      </div>
+    </section>
+
+    <!-- x ----------------------- x ----------------------- x ----------------------- x -------------------------x -->
+
+    <!-- Section 05 -->
+
+
+
+    <section class="sec-five">
+      <div class="sec-five-main-hed">
+        <h1>Our Comprehensive Services</h1>
+      </div>
+
+      <div class="sec-five-card-main-one">
+
+        <div class="sec-five-card-one">
+          <h2>Emergency Services</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            sed autem,
+          </p>
+        </div>
+
+        <div class="sec-five-card-two">
+          <h2>Advanced Diagnostics</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            sed autem,
+          </p>
+        </div>
+
+        <div class="sec-five-card-three">
+          <h2>Inpatient & Outpatient</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            sed autem,
+          </p>
+        </div>
+
+      </div>
+
+      <div class="sec-five-card-main-two">
+
+        <div class="sec-five-card-one">
+          <h2>Rehabilitation</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            sed autem,
+          </p>
+        </div>
+
+        <div class="sec-five-card-two">
+          <h2>Primary Care</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            sed autem,
+          </p>
+        </div>
+
+        <div class="sec-five-card-three">
+          <h2>Vaccination Center</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            sed autem,
+          </p>
+        </div>
+      </div>
+
+      <div></div>
+    </section>
+
+
+
+     <!-- x ----------------------- x ----------------------- x ----------------------- x -------------------------x -->
+
+    <!-- Section 06 -->
+
+
+
+    <section class="sec-six">
+      <div class="sec-six-item">
+        <i class="fa-solid fa-user-doctor"></i>
+        <h2>1500+</h2>
+        <p>Total Patients Served</p>
+      </div>
+
+      <div class="sec-six-item">
+        <i class="fa-solid fa-stethoscope"></i>
+        <h2>75</h2>
+        <p>Expert Doctors</p>
+      </div>
+
+      <div class="sec-six-item">
+        <i class="fa-solid fa-bed"></i>
+        <h2>200</h2>
+        <p>Total Rooms</p>
+      </div>
+
+      <div class="sec-six-item">
+        <i class="fa-solid fa-award"></i>
+        <h2>10+</h2>
+        <p>Years of Service</p>
+      </div>
+    </section>
+
+
+     <!-- x ----------------------- x ----------------------- x ----------------------- x -------------------------x -->
+
+    <!--  Footer -->
+
+
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>MediCare Central</h3>
+          <p>
+            Committed to providing the highest standards of healthcare excellence
+            and compassion. Your trusted partner in health.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <a href="#">About Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Contact</a>
+          <a href="#">Meet the Doctors</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact & Location</h3>
+          <p><i class="fa-solid fa-location-dot"></i>123 Health Ave, Wellness City, 90210</p>
+          <p><i class="fa-solid fa-phone"></i>(555) 123-4567</p>
+          <p><i class="fa-solid fa-envelope"></i>info@medicarecentral.com</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Social Links</h3>
+          <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+          <a href="#"><i class="fa-brands fa-twitter"></i>Twitter</a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+          <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+        </div>
+      </div>
+
+      <hr />
+      <div class="footer-bottom">
+        © 2025 MediCare Central Hospital. All Rights Reserved.
+      </div>
+    </footer>
+  </body>
+</html>

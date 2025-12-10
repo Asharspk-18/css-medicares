@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medicare Central-Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #052c33, #043f3a);
+      }
+
+      .main-container {
+        display: flex;
+        width: 1000px;
+        height: 580px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+      }
+
+      /* LEFT SIDE */
+      .bg-img-div {
+        width: 50%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px 0 0 15px;
+        align-items: flex-start;
+        background-image: url("./assets/images/login-image.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all 0.5s ease;
+      }
+
+      .bg-img-div:hover {
+        transform: scale(1.01);
+        cursor: pointer;
+        box-shadow: 0 0 25px #00bfa6;
+      }
+      .card-one-div {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        border-radius: 15px 0 0 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 70px 60px;
+      }
+
+      .bg-img-div h1 {
+        font-size: 45px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        margin-bottom: 15px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+
+      .bg-img-div p {
+        opacity: 0.8;
+        font-size: 18px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        line-height: 1.7;
+        max-width: 320px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Right Side Card */
+
+      .card-two-div {
+        width: 50%;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 70px;
+        border-radius: 0 15px 15px 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .card-two-div:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 25px #00bfa6;
+      }
+
+      .card-two-div h1 {
+        font-size: 40px;
+        font-weight: bolder;
+        color: #007f6e;
+        margin-bottom: 10px;
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 35px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .card-two-div h1::after {
+        content: "";
+        width: 45px;
+        height: 3px;
+        background: #00bfa6;
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        border-radius: 3px;
+        transition: all 0.4s ease-out;
+      }
+
+      .card-two-div h1:hover::after {
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .card-two-div p {
+        font-size: 18px;
+        margin-top: 15px;
+        color: #666;
+        margin-bottom: 35px;
+      }
+
+      .register-link {
+        color: #00bfa6;
+        font-weight: 600;
+        font-size: 18px;
+        text-decoration: none;
+        transition: all 0.4s ease-out;
+        display: inline-block;
+        padding-left: 6px;
+      }
+
+      .register-link:hover {
+        text-decoration: underline;
+        color: #007f6e;
+        transform: translateY(-3px);
+      }
+
+      /* Input Labels */
+      .input-div {
+        position: relative;
+        margin-bottom: 25px;
+      }
+
+      .input-div input {
+        width: 100%;
+        padding: 14px 45px 14px 15px;
+        border: 2px solid #cfcfcf;
+        border-radius: 8px;
+        font-size: 15px;
+        outline: none;
+        color: #333;
+        background: #fff;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .input-div input:focus {
+        border-color: #00bfa6;
+        box-shadow: 0 0 15px rgba(0, 191, 166, 0.9);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .input-div input:focus + .fa-icon-top {
+        transform: translateY(-35px);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .input-div label {
+        display: block;
+        font-size: 14px;
+        color: #024c45;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .input-div i {
+        position: absolute;
+        right: 15px;
+        top: 42px;
+        color: #00bfa6;
+        font-size: 15px;
+      }
+
+      /* Btn */
+      .btn {
+        width: 100%;
+        padding: 13px;
+        border: none;
+        border-radius: 8px;
+        background: linear-gradient(to right, #00bfa6, #007f6e);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 5px 12px rgba(0, 191, 166, 0.3);
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 191, 166, 0.4);
+      }
+
+      .p-text {
+        text-align: center;
+        font-size: 14px;
+        color: #777;
+        margin: 20px 0 10px 0;
+      }
+
+      /* Icons */
+      .fa-icon {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-bottom: -35px;
+        padding-bottom: 25px;
+      }
+
+      .icons {
+        border: 2px solid #ddd;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .icons i {
+        font-size: 18px;
+      }
+
+      .icons:first-child {
+        border-color: #3b5998;
+        color: #3b5998;
+      }
+
+      .icons:last-child {
+        border-color: #db4437;
+        color: #db4437;
+      }
+      .icons:first-child:hover {
+        background-color: #3b5998;
+        color: #fff;
+      }
+
+      .icons:last-child:hover {
+        background-color: #db4437;
+        color: #fff;
+      }
+
+      .icons:hover {
+        transform: scale(1.15);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="bg-img-div">
+        <div class="card-one-div">
+          <h1>Welcome Back!</h1>
+          <p>
+            Sign in to access exclusive updates and get appointment of our
+            experienced doctors
+          </p>
+        </div>
+      </div>
+
+      <div class="card-two-div">
+        <h1>Login</h1>
+        <p>
+          Don't have an account? <a class="register-link" href="#">Register</a>
+        </p>
+
+        <div class="input-div">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter your email" />
+          <i class="fa-solid fa-envelope fa-icon-top" aria-hidden="true"></i>
+        </div>
+
+        <div class="input-div">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+          />
+          <i class="fa-solid fa-lock fa-icon-top" aria-hidden="true"></i>
+        </div>
+
+        <div class="input-div">
+          <button type="submit" id="login_btn" class="btn">Login</button>
+          <p class="p-text">Or login with</p>
+        </div>
+
+        <div class="fa-icon">
+          <a class="icons">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a class="icons">
+            <i class="fa-brands fa-google" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
